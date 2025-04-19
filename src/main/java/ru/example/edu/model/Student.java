@@ -16,8 +16,17 @@ public class Student {
     @Column(name = "age")
     private int age;
 
+    public Student() {
+
+    }
     public Student(long id, String name, String email, int age) {
         this.id = id;
+        this.name = name;
+        this.email = email;
+        this.age = age;
+    }
+
+    public Student(String name, String email, int age) {
         this.name = name;
         this.email = email;
         this.age = age;
@@ -39,6 +48,8 @@ public class Student {
         return age;
     }
 
+
+
     @Override
     public String toString() {
         return "Student{" +
@@ -47,5 +58,18 @@ public class Student {
                 ", email='" + email + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    public void setEmail(String email) {
+
+        this.email = email;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
